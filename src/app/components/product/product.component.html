@@ -1,0 +1,33 @@
+<section>
+  <div class="container-fluid p-5">
+    <div class="w-75 mx-auto my-4">
+      <input [(ngModel)]="SearchName" type="search" class="form-control my-3" placeholder="{{ 'PRODUCTS_SECTION.SEARCH_PLACEHOLDER' | translate }}">
+    </div>
+    <div class="row gy-3">
+      @for (product of allProduct | search: SearchName; track product.id) {
+        <div class="col-lg-3 col-md-6">
+          <div class="product pt-3 ps-3 pe-3 pb-1">
+            <div [routerLink]="['/details', product.id]">
+              <img [src]="product.imageCover" [alt]="product.title" class="w-100">
+              <h3 class="h5 text-main fw-bolder pt-2">{{ product.category.name | translate }}</h3>
+              <p class="h6">{{ product.title.split(' ', 3).join(' ') }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-muted">{{ product.price }} EGP</span>
+                <div class="d-flex">
+                  <span><i class="fa fa-star rating-color"></i></span>
+                  <span class="text-muted">{{ 'PRODUCTS_SECTION.RATINGS' | translate }}{{ product.ratingsAverage }}</span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+              <button class="w-100 btn-main p-2" (click)="addToCart(product.id)">{{ 'PRODUCTS_SECTION.ADD_TO_CART' | translate }}</button>
+              <span (click)="addToWishlist(product.id)">
+                <i class="fa fa-heart fa-2x cursor-pointer" [ngClass]="{ 'text-danger': isInWishlist.has(product.id), 'text-muted': !isInWishlist.has(product.id) }"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,118 @@
+<section  class="container my-5 rounded-2  mx-auto">
+    <h1 class="h3 text-main">Register Now :</h1>
+
+        <form [formGroup]="registerForm" (ngSubmit)="registerSubmit()">
+            <div class="my-3 position-relative">
+                <label for ="name" class="top-40 position-relative transitionss" [class.top-40]="!username.length">Name : </label>
+                <input id="name" class="form-control shadow-none border-top-0 border-start-0 border-end-0 position-relative " type="text" formControlName="name" placeholder="Name : " [(ngModel)]="username" [ngClass]="{
+                    'is-valid':! registerForm.get('name')?.errors && (registerForm.get('name')?.touched ||registerForm.get('name')?.dirty ),
+                    'is-invalid':registerForm.get('name')?.errors && (registerForm.get('name')?.touched ||registerForm.get('name')?.dirty )
+                }">
+
+                @if(registerForm.get('name')?.errors && (registerForm.get('name')?.touched ||registerForm.get('name')?.dirty )){
+                    @if(registerForm.get('name')?.getError('required')){
+                        <p class="text-danger fw-bold text-capitalize mx-1">name is required</p>
+                    }
+                    @else if (registerForm.get('name')?.getError('minlength')) {
+                        <p class="text-danger fw-bold text-capitalize mx-1">Name Should be more than or equal  3 chars</p>
+                    }
+                    @else if (registerForm.get('name')?.getError('maxlength')) {
+                        
+                  <p class="text-danger fw-bold text-capitalize mx-1">Name Should be less than or equal  20 chars</p>
+                    }
+      
+                }
+
+            </div>
+            <div class="my-3">
+                <label for ="emain" class="top-40 position-relative transitionss" [class.top-40]="!email.length">E-Mail : </label>
+                <input id="emain" class="form-control shadow-none border-top-0 border-start-0 border-end-0 position-relative " type="email" formControlName="email" placeholder="E-Mail" [(ngModel)]="email" [ngClass]="{
+                    'is-valid':!registerForm.get('email')?.errors && (registerForm.get('email')?.touched || registerForm.get('email')?.dirty ),
+                    'is-invalid' :registerForm.get('email')?.errors && (registerForm.get('email')?.touched || registerForm.get('email')?.dirty )
+                }">
+
+                @if(registerForm.get('email')?.errors && (registerForm.get('email')?.touched || registerForm.get('email')?.dirty ) ){
+                    @if(registerForm.get('email')?.getError('required')){
+                        <p class="text-danger fw-bold text-capitalize mx-1">Email is required</p>
+                    }
+                   @else if (registerForm.get('email')?.getError('email')) {
+                    <p class="text-danger fw-bold text-capitalize mx-1">Enter a valid email</p>
+                   }
+                 
+                }
+
+      
+
+
+
+            </div>
+            <div class="my-3">
+                <label for ="phone" class="top-40 position-relative transitionss" [class.top-40]="!phone">Phone : </label>
+                <input id="phone" class="form-control shadow-none border-top-0 border-start-0 border-end-0 position-relative " type="tel" formControlName="phone" placeholder="Phone :" [(ngModel)]="phone" [ngClass]="{
+                    'is-valid':!registerForm.get('phone')?.errors &&( registerForm.get('phone')?.touched || registerForm.get('phone')?.dirty ),
+                    'is-invalid':registerForm.get('phone')?.errors &&( registerForm.get('phone')?.touched || registerForm.get('phone')?.dirty )
+                }">
+            </div>
+
+            @if(registerForm.get('phone')?.errors &&( registerForm.get('phone')?.touched || registerForm.get('phone')?.dirty )){
+                @if(registerForm.get('phone')?.getError('required')){
+                    <p class="text-danger fw-bold text-capitalize mx-1">phone is required</p>
+                }
+               @else if (registerForm.get('phone')?.getError('pattern')) {
+                <p class="text-danger fw-bold text-capitalize mx-1">Enter a valid phone number</p>
+               }
+             
+            }
+
+
+
+            <div class="my-3">
+                <label for ="password" class="top-40 position-relative transitionss" [class.top-40]="!password.length">Password : </label>
+                <input id="password" class="form-control shadow-none border-top-0 border-start-0 border-end-0 position-relative " type="password" formControlName="password" placeholder="Password :"[(ngModel)]="password" [ngClass]="{
+                    'is-valid':!registerForm.get('password')?.errors && (registerForm.get('password')?.touched || registerForm.get('password')?.dirty ),
+                    'is-invalid':registerForm.get('password')?.errors && (registerForm.get('password')?.touched || registerForm.get('password')?.dirty )
+                }">
+
+                
+            @if(registerForm.get('password')?.errors && (registerForm.get('password')?.touched || registerForm.get('password')?.dirty )){
+                @if(registerForm.get('password')?.getError('required')){
+                    <p class="text-danger fw-bold text-capitalize mx-1">password is required</p>
+                }
+               @else if (registerForm.get('password')?.getError('pattern')) {
+                <p class="text-danger fw-bold text-capitalize mx-1">Enter a valid password number</p>
+               }
+             
+            }
+            </div>
+            <div class="my-3">
+                <label for ="rePassword" class="top-40 position-relative transitionss" [class.top-40]="!repassword.length">rePassword : </label>
+                <input id="rePassword" class="form-control shadow-none border-top-0 border-start-0 border-end-0 position-relative " type="password" formControlName="rePassword" placeholder="rePassword" [(ngModel)]="repassword" >
+
+                @if(registerForm.getError('mismatch') && (registerForm.get('rePassword')?.touched)  ){
+                    <p class="text-danger fw-bold text-capitalize mx-1">password mismatch</p>
+
+                }
+            </div>
+
+            @if(msgError){
+                <p class="text-danger text-center fw-bold text-capitalize mx-1">{{msgError}}</p>
+
+            }
+
+           @if(msgSucess){
+            <p class="text-success text-center fw-bold text-capitalize mx-1"> success </p>
+
+           }
+
+            <button  [disabled]="registerForm.invalid || isLoading" type="submit" class="btn-main d-block ms-auto">Register
+             @if(isLoading){
+                <i class="fas fa-spin fa-spinner"></i>
+             }
+            </button>
+
+
+
+        </form>
+
+
+</section>

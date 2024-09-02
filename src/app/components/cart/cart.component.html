@@ -1,0 +1,43 @@
+<section class="m-5 p-5 container bg-light mx-auto">
+  <h2 class="text-main text-capitalize fw-bold">
+    {{ 'CART.TITLE' | translate }}
+  </h2>
+  <p class="text-main text-capitalize">
+    {{ 'CART.TOTAL_PRICE' | translate }}: {{ cartProduct?.data?.totalCartPrice | currency : 'GBP' }}
+  </p>
+  <div>
+      <div class="row g-2 align-items-center border-bottom">
+        @for (item of cartProduct?.data?.products; track item.product.id) {
+          <div class="col-md-2">
+              <img [src]="item.product.imageCover" [alt]="item.product.title" class="w-100">
+          </div>
+          <div class="col-md-10 d-flex align-items-center justify-content-between">
+             <div>
+              <h3>{{ item.product.title }}</h3>
+              <p class="text-muted text-main">{{ item.price | currency:'GBP' }} </p>
+              <div (click)="RemoveItemsFormCart(item.product.id)">
+                  <i class="fa-regular fa-trash-can text-danger fw-bold cursor-pointer"></i>
+              </div>
+             </div>
+             <div class="d-flex flex-row align-items-center justify-content-center">
+              <span (click)="UpdateCount(item.product.id , item.count + 1)">
+                <i class="fa-solid fa-plus m-2 fa-beat text-main cursor-pointer"></i>
+              </span>
+              <p class="p-0 m-2 fw-bolder">{{ item.count }}</p>
+              <span (click)="UpdateCount(item.product.id , item.count - 1)">
+                <i class="fa-solid fa-minus m-2 fa-beat text-main cursor-pointer"></i>
+              </span>
+             </div>
+          </div>
+        }
+      </div>
+      <div class="d-flex align-items-center justify-content-between">
+        <button class="btn btn-danger mt-5 d-block" (click)="ClearCart(cartProduct.cartId)">
+          {{ 'BUTTONS.CLEAR_CART' | translate }}
+        </button>
+        <button class="btn btn-main mt-5 d-block" [routerLink]="['/orders', cartProduct.cartId]">
+          {{ 'BUTTONS.ORDERS' | translate }}
+        </button>
+      </div>
+  </div>
+</section>

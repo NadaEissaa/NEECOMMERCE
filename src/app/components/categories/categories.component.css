@@ -1,0 +1,25 @@
+
+
+section {
+    background-color: #f8f9fa;
+}
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h4 {
+    font-size: 1.25rem;
+}
+
+.product-card p {
+    font-size: 0.875rem;
+}
+.text-sub{
+    color: #3572EF;
+}

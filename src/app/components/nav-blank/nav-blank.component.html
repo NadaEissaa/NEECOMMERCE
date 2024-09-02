@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="home">
+      <img src="./assets/images/logo.png">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active-link" routerLink="home">{{ 'NAVBAR.HOME' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active-link" routerLink="products">{{ 'NAVBAR.PRODUCTS' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active-link" routerLink="categories">{{ 'NAVBAR.CATEGORIES' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active-link" routerLink="brand">{{ 'NAVBAR.BRANDS' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active-link" routerLink="wishlist">{{ 'NAVBAR.WISHLIST' | translate }}</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav mb-lg-0 d-flex justify-content-between">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ 'LANG' | translate }}
+          </a>
+          <ul class="dropdown-menu">
+            <li (click)="change('en')"><a class="dropdown-item cursor-pointer">EN</a></li>
+            <li (click)="change('ar')"><a class="dropdown-item cursor-pointer">AR</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active-link" routerLink="cart">
+            <i class="fa-solid fa-cart-shopping fa-xl position-relative top-0 "></i>
+            <span class="badge bg-info position-absolute translate-middle">{{navCartCount()}}</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link cursor-pointer" (click)="logout()">
+            {{ 'NAVBAR.SIGNOUT' | translate }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

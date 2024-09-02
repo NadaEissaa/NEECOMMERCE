@@ -1,0 +1,37 @@
+<footer class="bg-main-light py-5">
+  <div class="container">
+    <h2 class="m-0 h4">{{ 'FOOTER.TITLE' | translate }}</h2>
+    <p class="text-muted small">
+      {{ 'FOOTER.DESCRIPTION' | translate }}
+    </p>
+
+    <!-- inputs design  -->
+    <div class="d-flex align-items-center gap-3 text-nowrap">
+      <input type="text" class="form-control" placeholder="{{ 'FOOTER.EMAIL_PLACEHOLDER' | translate }}" />
+      <button class="btn-main">{{ 'FOOTER.SHARE_BUTTON' | translate }}</button>
+    </div>
+
+    <hr />
+
+    <!-- footer payment Details Design  -->
+    <div class="pay-details d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2">
+        <h3 class="h6 m-0">{{ 'FOOTER.PAYMENT_PARTNERS' | translate }}</h3>
+        <img src="./assets/images/amazon-pay.png" width="30px" alt="Amazon Pay" />
+        <img
+          src="./assets/images/American-Express-Color.png"
+          width="30px"
+          alt="American Express"
+        />
+        <img src="./assets/images/paypal.png" width="30px" alt="PayPal" />
+        <img src="./assets/images/mastercard.webp" width="30px" alt="MasterCard" />
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <h3 class="h6 m-0">{{ 'FOOTER.DELIVERY_TEXT' | translate }}</h3>
+        <img src="./assets/images/get-google-play.png" width="75px" alt="{{ 'FOOTER.GET_GOOGLE_PLAY' | translate }}" />
+        <img src="./assets/images/get-apple-store.png" width="75px" alt="{{ 'FOOTER.GET_APPLE_STORE' | translate }}" />
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,34 @@
+@if (productDetails) {
+    <section class="m-5">
+
+        <h2 class="text-main my-5 fw-bold">{{ 'PRODUCT_DETAILS.TITLE' | translate }}</h2>
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                <img [src]="productDetails.imageCover" class="w-100" [alt]="productDetails.title">
+            </div>
+            <div class="col-md-9">
+                <h3 class="h5 text-main">{{productDetails.title}}</h3>
+                <p class="text-muted">{{productDetails.description}}</p>
+                <p>{{productDetails.category.name}}</p>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-muted">{{productDetails.price | currency:'EGP'}}</span>
+
+                    <div class="d-flex justify-content-center align-items-center">
+                        @for (num of [1,2,3,4,5].slice(0 , productDetails.ratingsAverage); track $index) {
+                            <span> <i class="fa fa-star rating-color"></i></span>
+                        }
+                        @if (productDetails.ratingsAverage % 1 !== 0) {
+                            <i class="fa-solid fa-star-half rating-color"></i>
+                        }
+                        <span class="text-muted">{{productDetails.ratingsAverage}}</span>
+                    </div>
+                </div>
+                <button class="w-100 btn-main p-2 my-5" (click)="addToCart(productDetails.id)">
+                    {{ 'BUTTONS.ADD_TO_CART' | translate }}
+                </button>
+            </div>
+        </div>
+    </section>
+}
+d

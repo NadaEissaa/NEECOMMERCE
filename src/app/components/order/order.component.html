@@ -1,0 +1,42 @@
+<section class="container m-5 p-5 bg-main-light mx-auto">
+    <h2 class="text-main text-center fw-bold">
+      {{ 'SHIPPING_ADDRESS.TITLE' | translate }}
+    </h2>
+
+   <form [formGroup]="Orders" (ngSubmit)="orderSubmit()">
+    <div class="my-2">
+        <label for="details" class="top-40 position-relative transitionss" [style.top]="details.length ? '0px' : '40px'">
+          {{ 'SHIPPING_ADDRESS.DETAILS_LABEL' | translate }} :
+        </label>
+        <input type="text" id="details"
+         class="form-control shadow-none border-top-0 border-start-0 border-end-0 position-relative"
+          placeholder="{{ 'SHIPPING_ADDRESS.DETAILS_PLACEHOLDER' | translate }}"
+          [(ngModel)]="details"
+          formControlName="details">
+    </div>
+    <div class="my-2">
+        <label for="phone" [class.top-40]="!phone" class="top-40 position-relative transitionss">
+          {{ 'SHIPPING_ADDRESS.PHONE_LABEL' | translate }} :
+        </label>
+        <input type="tel" id="phone"
+         class="form-control shadow-none border-top-0 border-start-0 border-end-0 position-relative" 
+         placeholder="{{ 'SHIPPING_ADDRESS.PHONE_PLACEHOLDER' | translate }}"
+         [(ngModel)]="phone"
+         formControlName="phone">
+    </div>
+    <div class="my-2">
+        <label for="city" [class.top-40]="!city.length" class="top-40 position-relative transitionss">
+          {{ 'SHIPPING_ADDRESS.CITY_LABEL' | translate }} :
+        </label>
+        <input type="text" 
+        id="city"
+         class="form-control shadow-none border-top-0 border-start-0 border-end-0 position-relative" 
+         placeholder="{{ 'SHIPPING_ADDRESS.CITY_PLACEHOLDER' | translate }}"
+         [(ngModel)]="city"
+         formControlName="city">
+    </div>
+    <button type="submit" class="btn-main my-4 ms-auto d-block">
+      {{ 'SHIPPING_ADDRESS.CHECKOUT_BUTTON' | translate }}
+    </button>
+   </form>
+</section>

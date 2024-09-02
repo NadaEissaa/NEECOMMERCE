@@ -1,0 +1,12 @@
+.form-control:focus{
+    border-color:transparent !important;
+}
+.product .btn-main{
+    transform: translateY(150%);
+    transition: all 0.5s;
+    
+}
+.product:hover .btn-main{
+    transform: translateX(0%);
+
+}

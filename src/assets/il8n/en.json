@@ -1,0 +1,117 @@
+{
+  "MAIN_SLIDER": {
+    "TITLE": "Main Slider",
+    "DESCRIPTION": "Browse the main images here"
+  },
+  "CATEGORIES_SECTION": {
+    "TITLE": "Popular Categories",
+    "CATEGORY_CARD": {
+      "DEFAULT_ALT": "Category Image"
+    }
+  },
+  "PRODUCTS_SECTION": {
+    "TITLE": "Products",
+    "SEARCH_PLACEHOLDER": "Search by name",
+    "ADD_TO_CART": "Add to Cart",
+    "RATINGS": "",
+    "PRICE": "Price",
+    "CATEGORY": "Category",
+    "WISHLIST": "Wishlist"
+  },
+  "OTHER": {
+    "HOME": "Home"
+  },
+  "NAVBAR": {
+    "HOME": "Home",
+    "PRODUCTS": "Products",
+    "CATEGORIES": "Categories",
+    "BRANDS": "Brands",
+    "CART": "Cart",
+    "WISHLIST": "Wishlist",
+    "SIGNOUT": "Sign Out",
+    "LOGIN": "Login",
+    "REGISTER": "Register",
+    "ORDERS": "Orders"
+  },
+  "SECONDARY_SLIDER": {
+    "IMAGE_1_ALT": "Image 1",
+    "IMAGE_2_ALT": "Image 2",
+    "IMAGE_3_ALT": "Image 3",
+    "IMAGE_4_ALT": "Image 4",
+    "IMAGE_5_ALT": "Image 5"
+  },
+  "BRANDS": {
+    "SECTION_TITLE": "All Brands"
+  },
+  "BUTTONS": {
+    "CLOSE": "Close",
+    "ADD_TO_CART": "Add to Cart",
+    "CLEAR_CART": "Clear Cart",
+    "ORDERS": "Orders"
+  },
+  "WISHLIST": {
+    "TITLE": "Wishlist"
+  },
+  "CART": {
+    "TITLE": "Cart Items",
+    "TOTAL_PRICE": "Total Cart Price"
+  },
+  "SHIPPING_ADDRESS": {
+    "TITLE": "Shipping Address",
+    "DETAILS_LABEL": "Details",
+    "DETAILS_PLACEHOLDER": "Enter details",
+    "PHONE_LABEL": "Phone",
+    "PHONE_PLACEHOLDER": "Enter phone number",
+    "CITY_LABEL": "City",
+    "CITY_PLACEHOLDER": "Enter city",
+    "CHECKOUT_BUTTON": "Check Out"
+  },
+  "ORDER_DETAILS": {
+    "ORDER_SUMMARY_TITLE": "Order Summary",
+    "SHIPPING_ADDRESS_TITLE": "Shipping Address",
+    "ADDRESS_LABEL": "Address",
+    "CITY_LABEL": "City",
+    "PHONE_LABEL": "Phone",
+    "PAYMENT_DETAILS_TITLE": "Payment Details",
+    "PAYMENT_METHOD_LABEL": "Payment Method",
+    "TOTAL_PRICE_LABEL": "Total Price",
+    "TAX_LABEL": "Tax",
+    "SHIPPING_PRICE_LABEL": "Shipping Price",
+    "PAID_LABEL": "Paid",
+    "YES": "Yes",
+    "NO": "No",
+    "PRODUCTS_IN_ORDER_TITLE": "Products in this Order",
+    "BRAND_LABEL": "Brand",
+    "CATEGORY_LABEL": "Category",
+    "PRICE_LABEL": "Price",
+    "QUANTITY_LABEL": "Quantity",
+    "TOTAL_LABEL": "Total"
+  },
+  "CATEGORY_NAMES": {
+    "MUSIC": "Music",
+    "MEN'S-FASHION": "Men's Fashion",
+    "WOMEN'S-FASHION": "Women's Fashion",
+    "SUPERMARKET": "Supermarket",
+    "BABY-AND-TOYS": "Baby and Toys",
+    "HOME": "Home",
+    "BOOKS": "Books",
+    "BEAUTY-AND-HEALTH": "Beauty and Health",
+    "MOBILES": "Mobiles",
+    "ELECTRONICS": "Electronics"
+  },
+  
+  "PRODUCT_DETAILS": {
+    "TITLE": "Product Details"
+  },
+  "FOOTER": {
+    "TITLE": "Get The FreshCart App",
+    "DESCRIPTION": "We Will Send You a Link, Open it on Your Phone to download the app",
+    "EMAIL_PLACEHOLDER": "Email",
+    "SHARE_BUTTON": "Share App Link",
+    "PAYMENT_PARTNERS": "Payment partners",
+    "DELIVERY_TEXT": "Get Deliveries with FreshCart",
+    "GET_GOOGLE_PLAY": "Get it on Google Play",
+    "GET_APPLE_STORE": "Download on the App Store"
+  },
+  "LANG": "Language"
+}

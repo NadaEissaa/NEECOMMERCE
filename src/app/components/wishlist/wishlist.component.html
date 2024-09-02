@@ -1,0 +1,27 @@
+<section class="m-5 p-5 container bg-light mx-auto">
+    <h2 class="text-main text-capitalize fw-bold">
+      {{ 'WISHLIST.TITLE' | translate }} 
+      <i class="fa-regular fa-heart ps-2"></i>
+    </h2>
+    <div>
+        <div class="row g-2 align-items-center border-bottom">
+            @for (product of wishList.data; track product) {
+                <div class="col-md-2">
+                    <img [src]="product.imageCover" [alt]="product.title" class="w-100">
+                </div>
+                <div class="col-md-10 d-flex align-items-center justify-content-between">
+                    <div>
+                        <h3>{{ product.title }}</h3>
+                        <p class="text-muted text-main">{{ product.price | currency:'GBP' }} </p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fa-regular fa-trash-can text-danger fw-bold cursor-pointer me-3" (click)="RemoveFromWishList(product._id)"></i>
+                        <button class="btn btn-main me-3" (click)="addToCart(product._id)">
+                            <i class="fa-solid fa-cart-plus"></i> {{ 'BUTTONS.ADD_TO_CART' | translate }}
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

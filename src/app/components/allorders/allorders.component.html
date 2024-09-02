@@ -1,0 +1,92 @@
+<section class="order-details container-fluid p-5 mx-auto">
+  <!-- Loop through each order -->
+  @for (order of allorders; track $index) {
+    
+    <!-- Order Summary -->
+    <div class="order-summary w-75 mx-auto my-4">
+      <h2 class="text-center mb-4 text-main fw-bold">
+        {{ 'ORDER_DETAILS.ORDER_SUMMARY_TITLE' | translate }}
+      </h2>
+      <!-- Shipping Address and Payment Details -->
+      <div class="row gy-3">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-main">
+                {{ 'ORDER_DETAILS.SHIPPING_ADDRESS_TITLE' | translate }}
+              </h5>
+              <p class="card-text">
+                <strong>{{ 'ORDER_DETAILS.ADDRESS_LABEL' | translate }}:</strong> {{ order.shippingAddress.details || 'N/A' }}
+              </p>
+              <p class="card-text">
+                <strong>{{ 'ORDER_DETAILS.CITY_LABEL' | translate }}:</strong> {{ order.shippingAddress.city || 'N/A' }}
+              </p>
+              <p class="card-text">
+                <strong>{{ 'ORDER_DETAILS.PHONE_LABEL' | translate }}:</strong> {{ order.shippingAddress.phone || 'N/A' }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-main">
+                {{ 'ORDER_DETAILS.PAYMENT_DETAILS_TITLE' | translate }}
+              </h5>
+              <p class="card-text">
+                <strong>{{ 'ORDER_DETAILS.PAYMENT_METHOD_LABEL' | translate }}:</strong> {{ order.paymentMethodType || 'N/A' }}
+              </p>
+              <p class="card-text">
+                <strong>{{ 'ORDER_DETAILS.TOTAL_PRICE_LABEL' | translate }}:</strong> {{ order.totalOrderPrice | currency }}
+              </p>
+              <p class="card-text">
+                <strong>{{ 'ORDER_DETAILS.TAX_LABEL' | translate }}:</strong> {{ order.taxPrice | currency }}
+              </p>
+              <p class="card-text">
+                <strong>{{ 'ORDER_DETAILS.SHIPPING_PRICE_LABEL' | translate }}:</strong> {{ order.shippingPrice | currency }}
+              </p>
+              <p class="card-text">
+                <strong>{{ 'ORDER_DETAILS.PAID_LABEL' | translate }}:</strong> {{ order.isPaid ? ( 'ORDER_DETAILS.YES' | translate) : ( 'ORDER_DETAILS.NO' | translate) }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order Items -->
+    <div class="order-items w-75 mx-auto my-4">
+      <h3 class="text-center mb-4 text-main fw-bold">
+        {{ 'ORDER_DETAILS.PRODUCTS_IN_ORDER_TITLE' | translate }}
+      </h3>
+      <div class="row gy-4">
+        <!-- Loop through each item in the current order's cartItems -->
+        @for (item of order.cartItems; track $index) {
+          <div class="col-md-4 col-lg-4 d-flex align-items-stretch mb-4">
+            <div class="card shadow-sm">
+              <img [src]="item.product.imageCover" class="card-img-top" [alt]="item.product.title">
+              <div class="card-body">
+                <h5 class="card-title">{{ item.product.title }}</h5>
+                <p class="card-text">
+                  <strong>{{ 'ORDER_DETAILS.BRAND_LABEL' | translate }}:</strong> {{ item.product.brand.name }}
+                </p>
+                <p class="card-text">
+                  <strong>{{ 'ORDER_DETAILS.CATEGORY_LABEL' | translate }}:</strong> {{ item.product.category.name }}
+                </p>
+                <p class="card-text">
+                  <strong>{{ 'ORDER_DETAILS.PRICE_LABEL' | translate }}:</strong> {{ item.price | currency }}
+                </p>
+                <p class="card-text">
+                  <strong>{{ 'ORDER_DETAILS.QUANTITY_LABEL' | translate }}:</strong> {{ item.count }}
+                </p>
+                <p class="card-text">
+                  <strong>{{ 'ORDER_DETAILS.TOTAL_LABEL' | translate }}:</strong> {{ item.price * item.count | currency }}
+                </p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</section>

@@ -1,0 +1,9 @@
+label {
+    position: absolute;
+    top: 0px;
+    transition: top 0.6s ease-out;
+}
+
+.top-40 {
+    top: 40px;
+}

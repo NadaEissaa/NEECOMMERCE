@@ -1,0 +1,117 @@
+{
+  "MAIN_SLIDER": {
+    "TITLE": "الشرائح الرئيسية",
+    "DESCRIPTION": "استعرض الصور الرئيسية هنا"
+  },
+  "CATEGORIES_SECTION": {
+    "TITLE": "الفئات الشائعة",
+    "CATEGORY_CARD": {
+      "DEFAULT_ALT": "صورة الفئة"
+    }
+  },
+  "PRODUCTS_SECTION": {
+    "TITLE": "المنتجات",
+    "SEARCH_PLACEHOLDER": "البحث عن طريق الاسم",
+    "ADD_TO_CART": "أضف إلى السلة",
+    "RATINGS": "",
+    "PRICE": "السعر",
+    "CATEGORY": "الفئة",
+    "WISHLIST": "المفضلة"
+  },
+  "OTHER": {
+    "HOME": "الرئيسية"
+  },
+  "NAVBAR": {
+    "HOME": "الرئيسية",
+    "PRODUCTS": "المنتجات",
+    "CATEGORIES": "الفئات",
+    "BRANDS": "العلامات التجارية",
+    "CART": "عربة التسوق",
+    "WISHLIST": "المفضلة",
+    "SIGNOUT": "تسجيل الخروج",
+    "LOGIN": "تسجيل الدخول",
+    "REGISTER": "إنشاء حساب",
+    "ORDERS": "الطلبات"
+  },
+  "SECONDARY_SLIDER": {
+    "IMAGE_1_ALT": "صورة 1",
+    "IMAGE_2_ALT": "صورة 2",
+    "IMAGE_3_ALT": "صورة 3",
+    "IMAGE_4_ALT": "صورة 4",
+    "IMAGE_5_ALT": "صورة 5"
+  },
+  "BRANDS": {
+    "SECTION_TITLE": "جميع العلامات التجارية"
+  },
+  "BUTTONS": {
+    "CLOSE": "إغلاق",
+    "ADD_TO_CART": "أضف إلى السلة",
+    "CLEAR_CART": "إفراغ السلة",
+    "ORDERS": "الطلبات"
+  },
+  "WISHLIST": {
+    "TITLE": "قائمة الرغبات"
+  },
+  "CART": {
+    "TITLE": "عناصر السلة",
+    "TOTAL_PRICE": "إجمالي سعر السلة"
+  },
+  "SHIPPING_ADDRESS": {
+    "TITLE": "عنوان الشحن",
+    "DETAILS_LABEL": "التفاصيل",
+    "DETAILS_PLACEHOLDER": "أدخل التفاصيل",
+    "PHONE_LABEL": "الهاتف",
+    "PHONE_PLACEHOLDER": "أدخل رقم الهاتف",
+    "CITY_LABEL": "المدينة",
+    "CITY_PLACEHOLDER": "أدخل المدينة",
+    "CHECKOUT_BUTTON": "إتمام الطلب"
+  },
+  "ORDER_DETAILS": {
+    "ORDER_SUMMARY_TITLE": "ملخص الطلب",
+    "SHIPPING_ADDRESS_TITLE": "عنوان الشحن",
+    "ADDRESS_LABEL": "العنوان",
+    "CITY_LABEL": "المدينة",
+    "PHONE_LABEL": "الهاتف",
+    "PAYMENT_DETAILS_TITLE": "تفاصيل الدفع",
+    "PAYMENT_METHOD_LABEL": "طريقة الدفع",
+    "TOTAL_PRICE_LABEL": "إجمالي السعر",
+    "TAX_LABEL": "الضريبة",
+    "SHIPPING_PRICE_LABEL": "سعر الشحن",
+    "PAID_LABEL": "مدفوع",
+    "YES": "نعم",
+    "NO": "لا",
+    "PRODUCTS_IN_ORDER_TITLE": "المنتجات في هذا الطلب",
+    "BRAND_LABEL": "العلامة التجارية",
+    "CATEGORY_LABEL": "الفئة",
+    "PRICE_LABEL": "السعر",
+    "QUANTITY_LABEL": "الكمية",
+    "TOTAL_LABEL": "الإجمالي"
+  },
+ "CATEGORY_NAMES": {
+    "MUSIC": "الموسيقى",
+    "MEN'S-FASHION": "موضة الرجال",
+    "WOMEN'S-FASHION": "موضة النساء",
+    "SUPERMARKET": "السوبر ماركت",
+    "BABY-AND-TOYS": "الأطفال والألعاب",
+    "HOME": "المنزل",
+    "BOOKS": "الكتب",
+    "BEAUTY-AND-HEALTH": "الجمال والصحة",
+    "MOBILES": "الهواتف المحمولة",
+    "ELECTRONICS": "الإلكترونيات"
+  },
+ 
+  "PRODUCT_DETAILS": {
+    "TITLE": "تفاصيل المنتج"
+  },
+  "FOOTER": {
+    "TITLE": "احصل على تطبيق FreshCart",
+    "DESCRIPTION": "سنرسل لك رابطًا، افتحه على هاتفك لتنزيل التطبيق",
+    "EMAIL_PLACEHOLDER": "البريد الإلكتروني",
+    "SHARE_BUTTON": "مشاركة رابط التطبيق",
+    "PAYMENT_PARTNERS": "شركاء الدفع",
+    "DELIVERY_TEXT": "احصل على التوصيلات مع FreshCart",
+    "GET_GOOGLE_PLAY": "احصل عليه على Google Play",
+    "GET_APPLE_STORE": "تحميل من App Store"
+  },
+  "LANG": "اللغة"
+}
